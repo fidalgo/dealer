@@ -7,3 +7,6 @@ end
 APP_PATH = File.expand_path('../../config/application', __FILE__)
 require_relative '../config/boot'
 require 'rails/commands'
+# Set Pumas as default server
+require 'rack/handler'
+Rack::Handler::WEBrick = Rack::Handler.get(:puma)
