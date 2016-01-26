@@ -10,6 +10,7 @@ RSpec.describe Organization, type: :model do
       it { should have_db_column(:name).of_type(:string).with_options(null: false) }
       it { should have_db_column(:public_name).of_type(:string).with_options(null: false) }
       it { should have_db_column(:type).of_type(:integer).with_options(null: false) }
+      it { should have_db_column(:pricing_policy).of_type(:integer).with_options(null: false) }
     end
   end
 
@@ -26,6 +27,10 @@ RSpec.describe Organization, type: :model do
 
     it 'requires type' do
       expect(organization).to validate_presence_of(:type)
+    end
+
+    it 'requires pricing_policy' do
+      expect(organization).to validate_presence_of(:pricing_policy)
     end
   end
 end
