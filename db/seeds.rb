@@ -7,15 +7,15 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Organization.delete_all
 show_room = Organization.create(name: 'BMW AG Showroom', public_name: 'BMW Showroom',
-                                organization_type: Organization.types['show_room'],
+                                organization_type: Organization.organization_types['show_room'],
                                 pricing_policy: Organization.pricing_policies['prestige'])
 
 service = Organization.create(name: 'BMW AG Service', public_name: 'BMW Service',
-                              organization_type: Organization.types['service'],
+                              organization_type: Organization.organization_types['service'],
                               pricing_policy: Organization.pricing_policies['flexible'])
 
 dealer = Organization.create(name: 'BMW AG Dealer', public_name: 'BMW Dealer',
-                             organization_type: Organization.types['dealer'],
+                             organization_type: Organization.organization_types['dealer'],
                              pricing_policy: Organization.pricing_policies['fixed'])
 
 Model.delete_all
