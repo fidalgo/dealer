@@ -14,4 +14,9 @@ group :development, :test do
   gem 'factory_girl_rails'
 end
 
+group :test do
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
+end
+
 gem 'simplecov', require: false, group: :test
